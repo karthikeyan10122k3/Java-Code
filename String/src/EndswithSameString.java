@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.String.src;
+
 public class EndswithSameString {
     public static void main(String[] args) {
         System.out.println(solution("karthikeyan", "yan"));
@@ -7,6 +9,7 @@ public class EndswithSameString {
 
     }
     public static boolean solution(String string,String ending){
-    return string.endsWith(ending);
+
+        return string.endsWith(ending);
     }
 }
