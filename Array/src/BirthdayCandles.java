@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.Array.src;
+
 public class BirthdayCandles {
     public static void main(String[] args) {
         int[] candles = {1, 9, 3, 4, 5, 9, 7, 8, 9};

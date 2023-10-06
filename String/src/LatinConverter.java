@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.String.src;
+
 public class LatinConverter {
 
 

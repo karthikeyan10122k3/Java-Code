@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.Number.src;
+
 public class LCM {
     public static void main(String[] args) {
         int num1=12,num2=14;

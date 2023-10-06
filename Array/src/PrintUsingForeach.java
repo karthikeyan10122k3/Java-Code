@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.Array.src;
+
 import java.util.Scanner;
 
 public class PrintUsingForeach {

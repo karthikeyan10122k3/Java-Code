@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.String.src;
+
 import java.util.Scanner;
 
 public class ToCamelCase {

@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.Number.src;
+
 public class HCF {
     public static void main(String[] args) {
         int num1=36,num2=60;

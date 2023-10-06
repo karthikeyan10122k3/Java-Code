@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.Number.src;
+
 public class PrefectSquare {
     public static void main(String[] args) {
         int num1=49;

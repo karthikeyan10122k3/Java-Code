@@ -1,11 +1,4 @@
-//Given an integer input as the number, the objective is to check whether the number
-// can be represented as the sum of its factors except the number itself.
-// Therefore, we write a code to Check Whether or Not a Number is a Perfect Number in Java Language.
-//
-//        Example
-//        Input : 6
-//        Output : Yes, it's a Perfect Number
-//        Since, 6 = 1 + 2 + 3 (which are its divisors)
+package com.kar.practice.exercise.Number.src;
 
 public class PerfectNumber {
     public static void main(String[] args) {

@@ -1,7 +1,9 @@
+package com.kar.practice.exercise.Number.src;
+
 import java.util.Scanner;
 
 public class RomanToNumber {
-    int value(char r)
+    public static int value(char r)
     {
         if (r == 'I')
             return 1;
@@ -19,7 +21,7 @@ public class RomanToNumber {
             return 1000;
         return -1;
     }
-    int romanToDecimal(String str)
+    public static int romanToDecimal(String str)
     {
         int res = 0;
 
@@ -28,10 +30,10 @@ public class RomanToNumber {
             if (i + 1 < str.length()) {
                 int s2 = value(str.charAt(i + 1));
                 if (s1 >= s2) {
-                    res = res + s1;
+                    res += s1;
                 }
                 else {
-                    res = res + s2 - s1;
+                    res += s2 - s1;
                     i++;
                 }
             }
@@ -46,7 +48,8 @@ public class RomanToNumber {
     {
         RomanToNumber ob = new RomanToNumber();
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter : ");
         String str = sc.nextLine();
-        System.out.println("Integer form of Roman Numeral"+ " is " + ob.romanToDecimal(str));
+        System.out.println("Integer form of Roman Numeral"+ " is " + romanToDecimal(str));
     }
 }

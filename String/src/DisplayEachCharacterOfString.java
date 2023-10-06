@@ -1,3 +1,5 @@
+package com.kar.practice.exercise.String.src;
+
 public class DisplayEachCharacterOfString {
     public static void main(String[] args) {
         characterDisplay();

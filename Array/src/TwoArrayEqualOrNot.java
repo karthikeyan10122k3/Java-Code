@@ -1,9 +1,9 @@
-package com.kar.practice.exercise;
+package com.kar.practice.exercise.Array.src;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static com.kar.practice.exercise.CheckArrayEqual.*;
+import static com.kar.practice.exercise.Array.src.CheckArrayEqual.check;
 
 
 class CheckArrayEqual {
