@@ -13,8 +13,7 @@ public class DoubleArray {
             array1[i]=sc.nextInt();
         }
         System.out.println("Original Array: ");
-        for (int elements: array1
-             ) {
+        for (int elements: array1 ) {
             System.out.println(elements);
 
         }
