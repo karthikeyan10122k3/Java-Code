@@ -26,17 +26,13 @@ public class DoubleArray {
         int[] array2 = new int[size2];
         for (int i = 0; i < size1; i++) {
             array2[i] = array1[i];
-
-        }
-        for (int i = size1; i < size2; i++) {
-            array2[i] = array1[i];
+            array2[size1 + i] = array1[i];
 
         }
         System.out.println("Duplicate Array: ");
 
-        for (int elements: array2
-        ) {
-            System.out.println(elements);
+        for (int elements: array2) {
+            System.out.print(elements);
 
         }
     }
