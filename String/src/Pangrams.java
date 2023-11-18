@@ -4,11 +4,10 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class Pangrams {
+public class Pangrams{
     public static void main(String[] args) {
         String s = "We promptly judged antique ivory buckles for the next prize";
         System.out.print(pangrams(s));
-//        pangrams(s);
     }
     public static String pangrams(String s) {
         char[] arr = s.toLowerCase().toCharArray();
