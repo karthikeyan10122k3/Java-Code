@@ -6,7 +6,7 @@ package com.kar.practice.exercise.String.src;
 //          Original alphabet:    abcdefghijklmnopqrstuvwxyz
 //        Alphabet rotated +3:    defghijklmnopqrstuvwxyzabc
 
-public class CaeserCipher{
+public class CaeserCipher {
     public static void main(String[] args) {
 
         System.out.println(toCaesarCipher("mi-RTYIndk",5));

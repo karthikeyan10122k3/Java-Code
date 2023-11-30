@@ -1,6 +1,6 @@
 package com.kar.practice.exercise.String.src;
 
-public class BreakCamelCase {
+public class BreakCamelCase{
     public static void main(String[] args) {
         System.out.println(breakCase("camelCasing"));
         System.out.println(newBreakCaseMethod("abdulAfshit"));

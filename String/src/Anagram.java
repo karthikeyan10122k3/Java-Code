@@ -2,7 +2,7 @@ package com.kar.practice.exercise.String.src;
 
 import java.util.Arrays;
 
-public class Anagram {
+public class Anagram{
     public static void main(String[] args) {
         String str1 = "Hello";
         String str2 = "hello";
