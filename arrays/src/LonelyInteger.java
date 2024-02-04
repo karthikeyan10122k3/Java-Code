@@ -5,21 +5,16 @@ import java.util.*;
 public class LonelyInteger{
     public static void main(String[] args) {
         List<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4,3,2,1));
-        System.out.println(lonelyinteger(a));
+        System.out.println(lonelyInteger(a));
     }
-    public static int lonelyinteger(List<Integer> a) {
+    public static int lonelyInteger(List<Integer> a) {
 
-        HashSet<Integer> dup = new HashSet<>();
-        for (int i = 0; i < a.size(); i++) {
-            dup.add(a.get(i));
-        }
-
-        List<Integer> list = new ArrayList<>(dup);
+        HashSet<Integer> dup = new HashSet<>(a);
 
         for (int i = 0; i < dup.size(); i++) {
-            int countOfIndividualElement = Collections.frequency(a, list.get(i));
+            int countOfIndividualElement = Collections.frequency(a, a.get(i));
             if(countOfIndividualElement==1){
-                return list.get(i);
+                return a.get(i);
             }
         }
         return 0;
