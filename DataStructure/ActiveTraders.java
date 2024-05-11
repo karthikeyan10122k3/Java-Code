@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.arrays.collestionsPractrice;
+package com.kar.practice.exercise.DataStructure;
 
 import java.util.*;
 
