@@ -37,13 +37,9 @@ public class FirstDuplicate {
         }
 
         if (smallestKey != -1) {
-//            System.out.println("Smallest Key with Last Occurrence Index: " + smallestKey + " (Index: " + smallestValue + ")");
             return smallestKey;
         } else {
-//            System.out.println("No duplicate elements found.");
             return -1;
         }
-
-
     }
 }

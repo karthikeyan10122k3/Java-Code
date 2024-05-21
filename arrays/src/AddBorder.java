@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.arrays;
+package com.kar.practice.exercise.arrays.src;
 
 import java.util.ArrayList;
 import java.util.Arrays;
