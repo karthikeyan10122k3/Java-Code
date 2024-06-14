@@ -14,8 +14,7 @@ public class CalenderClass {
     }
     public static String findDay(int month, int day, int year) {
         LocalDate date = LocalDate.of(year, month, day);
-        String dayOfWeek = String.valueOf(date.getDayOfWeek());
 
-        return dayOfWeek;
+        return String.valueOf(date.getDayOfWeek());
     }
 }
