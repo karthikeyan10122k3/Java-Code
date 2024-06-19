@@ -1,7 +1,6 @@
-package com.kar.practice.exercise;
+package com.kar.practice.exercise.strings.src;
 
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class CalenderClass {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.arrays;
+package com.kar.practice.exercise.arrays.src;
 
 public class Pattern {
     public static void main(String[] args) {

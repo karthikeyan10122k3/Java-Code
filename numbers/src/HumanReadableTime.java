@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.strings;
+package com.kar.practice.exercise.numbers.src;
 
 public class HumanReadableTime {
     public static void main(String[] args) {

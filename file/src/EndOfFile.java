@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.file;
+package com.kar.practice.exercise.file.src;
 
 import java.util.Scanner;
 

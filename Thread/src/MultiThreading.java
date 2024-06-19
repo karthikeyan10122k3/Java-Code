@@ -1,4 +1,4 @@
-package com.kar.practice.exercise;
+package com.kar.practice.exercise.Thread.src;
 
 public class MultiThreading{
     public static void main(String[] args) {

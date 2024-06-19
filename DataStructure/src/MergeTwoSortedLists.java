@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.DataStructure;
+package com.kar.practice.exercise.DataStructure.src;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -25,11 +25,9 @@ public class MergeTwoSortedLists {
     private static List<Integer> mergeSort(List<Integer> l1, List<Integer> l2) {
         List<Integer> mergedList = new LinkedList<>();
 
-        if (l1.size() == 0 && l2.size() ==0){
-            return l1;
-        } else if (l1.size() == 0 ) {
+       if (l1.isEmpty()) {
             return l2;
-        } else if (l2.size() == 0) {
+        } else if (l2.isEmpty()) {
             return l1;
         }
 

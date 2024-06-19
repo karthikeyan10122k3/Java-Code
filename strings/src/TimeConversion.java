@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.strings;
+package com.kar.practice.exercise.strings.src;
 
 public class TimeConversion {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class TimeConversion {
             if(times[0].matches("12")){
                 return;
             }
-            times[0] = String.valueOf(Integer.valueOf(times[0]) + 12);
+            times[0] = String.valueOf(Integer.parseInt(times[0]) + 12);
         }else{
             if(times[0].matches("12")){
                 times[0]= "00";

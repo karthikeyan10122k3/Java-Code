@@ -1,4 +1,4 @@
-package com.kar.practice.exercise;
+package com.kar.practice.exercise.arrays.src;
 
 import java.util.Scanner;
 
