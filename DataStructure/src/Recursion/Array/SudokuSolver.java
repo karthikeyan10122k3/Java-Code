@@ -1,6 +1,5 @@
 package com.kar.practice.exercise.DataStructure.src.Recursion.Array;
 
-import java.util.Arrays;
 
 public class SudokuSolver {
     public static void main(String[] args) {
