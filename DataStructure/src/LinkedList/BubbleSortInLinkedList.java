@@ -4,21 +4,21 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.LinkedList.
 
 public class BubbleSortInLinkedList {
     public static void main(String[] args) {
-            Node<Integer> LL = createLinkedList();
+            LinkedList.Node<Integer> LL = createLinkedList();
             System.out.println("Initial Linked List: ");
             printLinkedList(LL);
 
            bubbleSortInLinkedList(LL);
 
     }
-    static void bubbleSortInLinkedList(Node<Integer> head){
+    static void bubbleSortInLinkedList(LinkedList.Node<Integer> head){
 
         if (head == null){
             return;
         }
         boolean isRearranged ;
-        Node<Integer> temp;
-        Node<Integer> lastSortedNodeData = null;
+        LinkedList.Node<Integer> temp;
+        LinkedList.Node<Integer> lastSortedNodeData = null;
 
         do{
 

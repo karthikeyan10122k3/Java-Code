@@ -5,9 +5,9 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.LinkedList.
 
 public class AddTwoNumbers {
     public static void main(String[] args) {
-        Node<Integer> LL1 = createLinkedList();
+        LinkedList.Node<Integer> LL1 = createLinkedList();
 
-        Node<Integer> LL2 = createLinkedList();
+        LinkedList.Node<Integer> LL2 = createLinkedList();
         System.out.print("Initial Linked List 1: ");
         printLinkedList(LL1);
         System.out.print("Initial Linked List 2: ");
@@ -21,13 +21,13 @@ public class AddTwoNumbers {
     }
 
     // Slow
-    public static Node<Integer> addTwoNumbersSlowWay(Node<Integer> l1, Node<Integer> l2) {
+    public static LinkedList.Node<Integer> addTwoNumbersSlowWay(LinkedList.Node<Integer> l1, LinkedList.Node<Integer> l2) {
 
-        Node<Integer> addedListHead = new Node<>() ;
-        Node<Integer> addedListTemp = addedListHead ;
+        LinkedList.Node<Integer> addedListHead = new LinkedList.Node<>() ;
+        LinkedList.Node<Integer> addedListTemp = addedListHead ;
 
-        Node<Integer> temp1 = l1;
-        Node<Integer> temp2 = l2;
+        LinkedList.Node<Integer> temp1 = l1;
+        LinkedList.Node<Integer> temp2 = l2;
 
         int sum ;
 
@@ -45,7 +45,7 @@ public class AddTwoNumbers {
             }else {
                 value = sum;
             }
-            addedListTemp.next = new Node<>(value);
+            addedListTemp.next = new LinkedList.Node<>(value);
             addedListTemp = addedListTemp.next;
 
         }
@@ -59,7 +59,7 @@ public class AddTwoNumbers {
             }else {
                 value = sum;
             }
-            addedListTemp.next = new Node<>(value);
+            addedListTemp.next = new LinkedList.Node<>(value);
             addedListTemp = addedListTemp.next;
 
         }
@@ -74,7 +74,7 @@ public class AddTwoNumbers {
             }else {
                 value = sum;
             }
-            addedListTemp.next = new Node<>(value);
+            addedListTemp.next = new LinkedList.Node<>(value);
             addedListTemp = addedListTemp.next;
 
         }
@@ -82,7 +82,7 @@ public class AddTwoNumbers {
 
 
         if (carry != 0){
-            addedListTemp.next = new Node<>(carry);
+            addedListTemp.next = new LinkedList.Node<>(carry);
             addedListTemp = addedListTemp.next;
         }
 
@@ -93,11 +93,11 @@ public class AddTwoNumbers {
     }
 
     //Fast
-        public static Node<Integer> addTwoNumbersFastWay(Node<Integer> l1, Node<Integer> l2) {
-            Node<Integer> dummyHead = new Node<>(0);
-            Node<Integer> current = dummyHead;
-            Node<Integer> temp1 = l1;
-            Node<Integer> temp2 = l2;
+        public static LinkedList.Node<Integer> addTwoNumbersFastWay(LinkedList.Node<Integer> l1, LinkedList.Node<Integer> l2) {
+            LinkedList.Node<Integer> dummyHead = new LinkedList.Node<>(0);
+            LinkedList.Node<Integer> current = dummyHead;
+            LinkedList.Node<Integer> temp1 = l1;
+            LinkedList.Node<Integer> temp2 = l2;
             int carry = 0;
 
             while (temp1 != null || temp2 != null) {
@@ -105,14 +105,14 @@ public class AddTwoNumbers {
                 int y = (temp2 != null) ? temp2.data : 0;
                 int sum = carry + x + y;
                 carry = sum / 10;
-                current.next = new Node<>(sum % 10);
+                current.next = new LinkedList.Node<>(sum % 10);
                 current = current.next;
                 if (temp1 != null) temp1 = temp1.next;
                 if (temp2 != null) temp2 = temp2.next;
             }
 
             if (carry > 0) {
-                current.next = new Node<>(carry);
+                current.next = new LinkedList.Node<>(carry);
             }
 
             return dummyHead.next;

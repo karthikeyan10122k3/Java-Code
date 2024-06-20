@@ -4,7 +4,21 @@ import java.util.Scanner;
 
 public class LinkedList {
 
-public static Node<Integer> createLinkedList(){
+	public static class Node <T> {
+
+		public T data;
+		public Node<T> next;
+
+		public Node() {
+		}
+
+		public Node(T data) {
+			this.data = data;
+		}
+
+	}
+
+	public static Node<Integer> createLinkedList(){
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Linked List Data : ");
@@ -48,5 +62,6 @@ public static Node<Integer> createLinkedList(){
 		}
 		System.out.println("END");
 	}
+
 
 }

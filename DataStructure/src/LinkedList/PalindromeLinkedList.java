@@ -7,14 +7,14 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.MiddleOfLin
 
 public class PalindromeLinkedList {
     public static void main(String[] args) {
-        Node<Integer> LL = createLinkedList();
+        LinkedList.Node<Integer> LL = createLinkedList();
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
         palindromeLinkedList(LL);
     }
 
-    private static void palindromeLinkedList(Node<Integer> head) {
+    private static void palindromeLinkedList(LinkedList.Node<Integer> head) {
         if(head == null ){
             System.out.println("FALSE!!");
             return;
@@ -28,12 +28,12 @@ public class PalindromeLinkedList {
         int count = getSize(head);
 
         // Getting MiddleNode of LL
-        Node<Integer> middleNode  = middleOfLinkedList(head);
+        LinkedList.Node<Integer> middleNode  = middleOfLinkedList(head);
 
         // Checking Palindrome
-        Node<Integer> before = head ;
-        Node<Integer> current = head;
-        Node<Integer> after = current.next;
+        LinkedList.Node<Integer> before = head ;
+        LinkedList.Node<Integer> current = head;
+        LinkedList.Node<Integer> after = current.next;
 
         while (after !=null && after != middleNode) {
             current = after;
