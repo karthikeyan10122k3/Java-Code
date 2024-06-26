@@ -3,13 +3,13 @@ package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 public class BinarySearchTree<T extends Comparable<T>> {
 
 //  Node Class
-    public static class Node<T>{
+    public static class TreeNode<T>{
         final T value;
         private int height;
-        Node<T> left;
-        Node<T> right;
+        TreeNode<T> left;
+        TreeNode<T> right;
 
-        public Node (T value){
+        public TreeNode(T value){
             this.value = value;
         }
     }
@@ -19,29 +19,29 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
 //  Getting Height Of the Node
-    public int getHeight(Node<T> node){
-        if (node == null){
+    public int getHeight(TreeNode<T> treeNode){
+        if (treeNode == null){
             return  -1;
         }
-        return node.height;
+        return treeNode.height;
     }
 //  Checking if Tree is Empty
     public boolean isEmpty(){
         return root == null;
     }
 
-    private Node<T> root;
+    private TreeNode<T> root;
 
 //  Inserting Part
 
     // Inserting Individual Element
-    public Node<T> insert(T value) {
+    public TreeNode<T> insert(T value) {
         root = insert(root, value);
         return root;
     }
 
     // Inserting as Array
-    public Node<T> insert(T[] inputArray){
+    public TreeNode<T> insert(T[] inputArray){
         for (T value : inputArray) {
             root = insert(root, value);
         }
@@ -65,31 +65,31 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // Inserting element in a Tree Main Recursive Function
-    private Node<T> insert(Node<T> node, T value) {
-        if (node == null) {
-            Node<T> newNode = new Node<>(value);
-            return newNode;
+    private TreeNode<T> insert(TreeNode<T> treeNode, T value) {
+        if (treeNode == null) {
+            TreeNode<T> newTreeNode = new TreeNode<>(value);
+            return newTreeNode;
         }
 
-        int compare = value.compareTo(node.value);
+        int compare = value.compareTo(treeNode.value);
         if (compare < 0) {
-            node.left = insert(node.left, value);
+            treeNode.left = insert(treeNode.left, value);
         } else if (compare > 0) {
-            node.right = insert(node.right, value);
+            treeNode.right = insert(treeNode.right, value);
         }
 
-        node.height = Math.max(getHeight(node.left), getHeight(node.left)) + 1;
+        treeNode.height = Math.max(getHeight(treeNode.left), getHeight(treeNode.left)) + 1;
 
-        return node;
+        return treeNode;
     }
 
 //  Checking if A Node is Balanced
-    private boolean balanced(Node<T> node){
-        if (node == null){
+    private boolean balanced(TreeNode<T> treeNode){
+        if (treeNode == null){
             return true;
         }
 
-        return Math.max(getHeight(node.left), getHeight(node.right)) <=1 && balanced(node.left) && balanced(node.right) ;
+        return Math.max(getHeight(treeNode.left), getHeight(treeNode.right)) <=1 && balanced(treeNode.left) && balanced(treeNode.right) ;
     }
 
 //  Displaying Tree Part
@@ -97,8 +97,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
         displayTree(root, "", true);
     }
 
-    private void displayTree(Node<T> node, String indent, boolean isRight) {
-        if (node == null) {
+    private void displayTree(TreeNode<T> treeNode, String indent, boolean isRight) {
+        if (treeNode == null) {
             return;
         }
 
@@ -112,9 +112,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
             indent += "|    ";
         }
 
-        System.out.println(node.value);
-        displayTree(node.left, indent, false);
-        displayTree(node.right, indent, true);
+        System.out.println(treeNode.value);
+        displayTree(treeNode.left, indent, false);
+        displayTree(treeNode.right, indent, true);
     }
 
 }

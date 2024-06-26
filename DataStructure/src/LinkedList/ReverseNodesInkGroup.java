@@ -13,7 +13,7 @@ public class ReverseNodesInkGroup {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        LinkedList.Node<Integer> LL = createLinkedList();
+        LinkedList.ListNode<Integer> LL = createLinkedList();
         System.out.print("Enter The value of K to Reverse: ");
         int k = sc.nextInt();
 
@@ -28,7 +28,7 @@ public class ReverseNodesInkGroup {
         reverseNodesInkGroup(LL,k);
     }
 
-    private static void reverseNodesInkGroup(LinkedList.Node<Integer> head, int k) {
+    private static void reverseNodesInkGroup(LinkedList.ListNode<Integer> head, int k) {
         if(head == null){
             return;
         }
@@ -37,10 +37,10 @@ public class ReverseNodesInkGroup {
             printLinkedList(head);
             return;
         }
-        LinkedList.Node<Integer> current = head;
-        LinkedList.Node<Integer> after = current;
-        LinkedList.Node<Integer> before = current ;
-        LinkedList.Node<Integer> start = current;
+        LinkedList.ListNode<Integer> current = head;
+        LinkedList.ListNode<Integer> after = current;
+        LinkedList.ListNode<Integer> before = current ;
+        LinkedList.ListNode<Integer> start = current;
 
         int count = 0;
         while ( after != null ){

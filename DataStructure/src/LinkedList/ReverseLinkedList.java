@@ -5,22 +5,22 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.LinkedList.
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
-        LinkedList.Node<Integer> LL = createLinkedList();
+        LinkedList.ListNode<Integer> LL = createLinkedList();
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
         reversLinkedList(LL);
     }
 
-    private static void reversLinkedList(LinkedList.Node<Integer> head) {
+    private static void reversLinkedList(LinkedList.ListNode<Integer> head) {
         if(head == null  || head.next ==null){
             System.out.println(head);
             return;
         }
 
-        LinkedList.Node<Integer> current = head;
-        LinkedList.Node<Integer> before;
-        LinkedList.Node<Integer> after = current.next;
+        LinkedList.ListNode<Integer> current = head;
+        LinkedList.ListNode<Integer> before;
+        LinkedList.ListNode<Integer> after = current.next;
         current.next = null;
 
         while ( after != null){

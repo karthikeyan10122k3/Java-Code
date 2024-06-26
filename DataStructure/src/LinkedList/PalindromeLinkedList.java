@@ -7,14 +7,14 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.MiddleOfLin
 
 public class PalindromeLinkedList {
     public static void main(String[] args) {
-        LinkedList.Node<Integer> LL = createLinkedList();
+        ListNode<Integer> LL = createLinkedList();
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
         palindromeLinkedList(LL);
     }
 
-    private static void palindromeLinkedList(LinkedList.Node<Integer> head) {
+    private static void palindromeLinkedList(ListNode<Integer> head) {
         if(head == null ){
             System.out.println("FALSE!!");
             return;
@@ -28,21 +28,21 @@ public class PalindromeLinkedList {
         int count = getSize(head);
 
         // Getting MiddleNode of LL
-        LinkedList.Node<Integer> middleNode  = middleOfLinkedList(head);
+        ListNode<Integer> middleListNode = middleOfLinkedList(head);
 
         // Checking Palindrome
-        LinkedList.Node<Integer> before = head ;
-        LinkedList.Node<Integer> current = head;
-        LinkedList.Node<Integer> after = current.next;
+        ListNode<Integer> before = head ;
+        ListNode<Integer> current = head;
+        ListNode<Integer> after = current.next;
 
-        while (after !=null && after != middleNode) {
+        while (after !=null && after != middleListNode) {
             current = after;
             after = after.next;
             current.next = before;
             before = current;
         }
 
-        head.next = middleNode;
+        head.next = middleListNode;
         head = current;
 
         System.out.print("Final Linked List: ");
@@ -51,17 +51,17 @@ public class PalindromeLinkedList {
         current = head;
 
         if (count%2 == 1){
-            middleNode = middleNode.next;
+            middleListNode = middleListNode.next;
         }
 
-        while (middleNode != null){
+        while (middleListNode != null){
 
-            if (!Objects.equals(current.data, middleNode.data)){
+            if (!Objects.equals(current.data, middleListNode.data)){
                 System.out.println("FALSE!!");
                 return ;
             }
             current = current.next;
-            middleNode = middleNode.next;
+            middleListNode = middleListNode.next;
         }
         System.out.println("TRUE!!");
     }

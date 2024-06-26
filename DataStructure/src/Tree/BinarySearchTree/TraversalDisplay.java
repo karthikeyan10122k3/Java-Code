@@ -5,11 +5,10 @@ public class TraversalDisplay {
     public static void main(String[] args) {
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
-        BinarySearchTree.Node<Integer> root = bst.insert(new Integer[]{50,30,20,40,10,25,70,60,80,75,100});
+        BinarySearchTree.TreeNode<Integer> root = bst.insert(new Integer[]{50,30,20,40,10,25,70,60,80,75,100});
 
 //        bst.displayTree();
 
-//        traversal(root);
         System.out.println("Pre-Order Traversal Display: ");
         preOrderDisplay(root, "",true);
         System.out.println();
@@ -25,8 +24,8 @@ public class TraversalDisplay {
     }
 
 
-    private static void  preOrderDisplay(BinarySearchTree.Node<Integer> node, String indent, boolean isRight) {
-        if (node == null) {
+    private static void preOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+        if (treeNode == null) {
             return;
         }
 
@@ -40,17 +39,17 @@ public class TraversalDisplay {
             indent += "|    ";
         }
 
-        System.out.println(node.value);
-        preOrderDisplay(node.left, indent, false);
-        preOrderDisplay(node.right, indent, true);
+        System.out.println(treeNode.value);
+        preOrderDisplay(treeNode.left, indent, false);
+        preOrderDisplay(treeNode.right, indent, true);
     }
 
-    private static void inOrderDisplay(BinarySearchTree.Node<Integer> node, String indent, boolean isRight) {
-        if (node == null) {
+    private static void inOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+        if (treeNode == null) {
             return;
         }
 
-        inOrderDisplay(node.left, indent + (isRight ? "     " : "|    "), false);
+        inOrderDisplay(treeNode.left, indent + (isRight ? "     " : "|    "), false);
 
         System.out.print(indent);
 
@@ -60,18 +59,18 @@ public class TraversalDisplay {
             System.out.print("L----");
         }
 
-        System.out.println(node.value);
+        System.out.println(treeNode.value);
 
-        inOrderDisplay(node.right, indent + (isRight ? "     " : "|    "), true);
+        inOrderDisplay(treeNode.right, indent + (isRight ? "     " : "|    "), true);
     }
 
-    private static void postOrderDisplay(BinarySearchTree.Node<Integer> node, String indent, boolean isRight) {
-        if (node == null) {
+    private static void postOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+        if (treeNode == null) {
             return;
         }
 
-        postOrderDisplay(node.left, indent + (isRight ? "     " : "|    "), false);
-        postOrderDisplay(node.right, indent + (isRight ? "     " : "|    "), true);
+        postOrderDisplay(treeNode.left, indent + (isRight ? "     " : "|    "), false);
+        postOrderDisplay(treeNode.right, indent + (isRight ? "     " : "|    "), true);
 
         System.out.print(indent);
 
@@ -81,7 +80,7 @@ public class TraversalDisplay {
             System.out.print("L----");
         }
 
-        System.out.println(node.value);
+        System.out.println(treeNode.value);
     }
 
 

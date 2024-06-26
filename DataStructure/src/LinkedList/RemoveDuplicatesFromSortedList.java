@@ -8,7 +8,7 @@ import static com.kar.practice.exercise.DataStructure.src.LinkedList.LinkedList.
 public class RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
-        LinkedList.Node<Integer> LL = createLinkedList();
+        LinkedList.ListNode<Integer> LL = createLinkedList();
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
@@ -16,11 +16,11 @@ public class RemoveDuplicatesFromSortedList {
         removeDuplicates(LL);
     }
 
-    private static void removeDuplicates(LinkedList.Node<Integer> head) {
+    private static void removeDuplicates(LinkedList.ListNode<Integer> head) {
         if (head == null || head.next == null){
             System.out.println(head);
         }
-        LinkedList.Node<Integer> current = head;
+        LinkedList.ListNode<Integer> current = head;
 
         while (current != null && current.next != null) {
             if (Objects.equals(current.data, current.next.data)) {

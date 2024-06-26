@@ -10,7 +10,7 @@ public class RemoveLinkedListElements {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        LinkedList.Node<Integer> LL = createLinkedList();
+        LinkedList.ListNode<Integer> LL = createLinkedList();
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
@@ -20,13 +20,13 @@ public class RemoveLinkedListElements {
         removeLinkedListElements(LL,val);
     }
 
-    private static void removeLinkedListElements(LinkedList.Node<Integer> head, int val) {
+    private static void removeLinkedListElements(LinkedList.ListNode<Integer> head, int val) {
         if(head == null ){
             System.out.println(head);
             return;
         }
 
-            LinkedList.Node<Integer> current = head;
+            LinkedList.ListNode<Integer> current = head;
 //            Node<Integer> before;
 //            Node<Integer> after = current.next;
 

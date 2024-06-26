@@ -4,34 +4,34 @@ import java.util.Scanner;
 
 public class LinkedList {
 
-	public static class Node <T> {
+	public static class ListNode<T> {
 
 		public T data;
-		public Node<T> next;
+		public ListNode<T> next;
 
-		public Node() {
+		public ListNode() {
 		}
 
-		public Node(T data) {
+		public ListNode(T data) {
 			this.data = data;
 		}
 
 	}
 
-	public static Node<Integer> createLinkedList(){
+	public static ListNode<Integer> createLinkedList(){
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Linked List Data : ");
 
 		int n = sc.nextInt();
-		Node<Integer> head = null;
-		Node<Integer> current = null;
+		ListNode<Integer> head = null;
+		ListNode<Integer> current = null;
 		while(n != -1) {
 			if(head == null) {
-				head = new Node<>(n);
+				head = new ListNode<>(n);
 				current = head;
 			}else {
-				Node<Integer> temp = new Node<>(n);
+				ListNode<Integer> temp = new ListNode<>(n);
 				current.next = temp;
 				current = current.next;
 			}
@@ -42,8 +42,8 @@ public class LinkedList {
 		return head;
 	}
 
-	public static int getSize(Node<Integer> head ){
-		Node<Integer> temp = head;
+	public static int getSize(ListNode<Integer> head ){
+		ListNode<Integer> temp = head;
 		int count = 0;
 		while(temp != null){
 			count++;
@@ -53,9 +53,9 @@ public class LinkedList {
 		return count;
 	}
 
-	public static void printLinkedList(Node<Integer> head) {
+	public static void printLinkedList(ListNode<Integer> head) {
 		
-		Node<Integer> temp = head;
+		ListNode<Integer> temp = head;
 		while(temp != null) {
 			System.out.print(temp.data + " ->");
 			temp = temp.next;
