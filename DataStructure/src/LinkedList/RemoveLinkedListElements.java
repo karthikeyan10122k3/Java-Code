@@ -30,7 +30,7 @@ public class RemoveLinkedListElements {
 //            Node<Integer> before;
 //            Node<Integer> after = current.next;
 
-            while (current != null && current.next != null) {
+            while (current.next != null) {
                 if (Objects.equals(current.next.data,val)) {
                     current.next = current.next.next;
                 } else {
