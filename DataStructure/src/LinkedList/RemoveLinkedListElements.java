@@ -27,8 +27,8 @@ public class RemoveLinkedListElements {
         }
 
             LinkedList.ListNode<Integer> current = head;
-//            Node<Integer> before;
-//            Node<Integer> after = current.next;
+//            BinaryTreeNode<Integer> before;
+//            BinaryTreeNode<Integer> after = current.next;
 
             while (current.next != null) {
                 if (Objects.equals(current.next.data,val)) {

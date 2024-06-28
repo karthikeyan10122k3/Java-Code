@@ -4,37 +4,37 @@ import java.util.Scanner;
 
 public class BinaryTree<T> {
     Scanner sc = new Scanner(System.in);
-    private static class Node<T>{
+    public static class BinaryTreeNode<T>{
         T data;
-        Node<T> left;
-        Node<T> right;
-        public Node(T data){
+        BinaryTreeNode<T> left;
+        BinaryTreeNode<T> right;
+        public BinaryTreeNode(T data){
             this.data = data;
         }
     }
 
-    private Node<T> root;
+    public BinaryTreeNode<T> root;
 
     public void createBinaryTree() {
-        System.out.println("Enter the Root Node: ");
+        System.out.println("Enter the Root BinaryTreeNode: ");
         T value = (T) sc.next();
-        root = new Node<>(value);
+        root = new BinaryTreeNode<>(value);
         createBinaryTree(root);
     }
 
-    private void createBinaryTree(Node<T> node) {
-        System.out.println("Enter left child of " + node.data + " (or 'null' if no child): ");
+    private void createBinaryTree(BinaryTreeNode<T> binaryTreeNode) {
+        System.out.println("Enter left child of " + binaryTreeNode.data + " (or 'null' if no child): ");
         String leftData = sc.next();
         if (!leftData.equals("null")) {
-            node.left = new Node<>((T) leftData);
-            createBinaryTree(node.left);
+            binaryTreeNode.left = new BinaryTreeNode<>((T) leftData);
+            createBinaryTree(binaryTreeNode.left);
         }
 
-        System.out.println("Enter right child of " + node.data + " (or 'null' if no child): ");
+        System.out.println("Enter right child of " + binaryTreeNode.data + " (or 'null' if no child): ");
         String rightData = sc.next();
         if (!rightData.equals("null")) {
-            node.right = new Node<>((T) rightData);
-            createBinaryTree(node.right);
+            binaryTreeNode.right = new BinaryTreeNode<>((T) rightData);
+            createBinaryTree(binaryTreeNode.right);
         }
     }
 
@@ -42,8 +42,8 @@ public class BinaryTree<T> {
         displayTree(root, "", true);
     }
 
-    private void displayTree(Node<T> node, String indent, boolean isRight) {
-        if (node == null) {
+    private void displayTree(BinaryTreeNode<T> binaryTreeNode, String indent, boolean isRight) {
+        if (binaryTreeNode == null) {
             return;
         }
 
@@ -57,9 +57,9 @@ public class BinaryTree<T> {
             indent += "|    ";
         }
 
-        System.out.println(node.data);
-        displayTree(node.left, indent, false);
-        displayTree(node.right, indent, true);
+        System.out.println(binaryTreeNode.data);
+        displayTree(binaryTreeNode.left, indent, false);
+        displayTree(binaryTreeNode.right, indent, true);
     }
 
 }

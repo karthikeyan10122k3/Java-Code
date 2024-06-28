@@ -11,7 +11,7 @@ public class RemoveNthNodeFromEndOfList {
         System.out.print("Initial Linked List: ");
         printLinkedList(LL);
 
-        System.out.print("Enter Node Index To Remove: ");
+        System.out.print("Enter BinaryTreeNode Index To Remove: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 

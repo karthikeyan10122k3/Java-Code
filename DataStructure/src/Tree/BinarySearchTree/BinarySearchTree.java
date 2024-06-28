@@ -2,7 +2,7 @@ package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 
-//  Node Class
+//  BinaryTreeNode Class
     public static class TreeNode<T>{
         final T value;
         private int height;
@@ -18,7 +18,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     }
 
-//  Getting Height Of the Node
+//  Getting Height Of the BinaryTreeNode
     public int getHeight(TreeNode<T> treeNode){
         if (treeNode == null){
             return  -1;
@@ -83,7 +83,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return treeNode;
     }
 
-//  Checking if A Node is Balanced
+//  Checking if A BinaryTreeNode is Balanced
     private boolean balanced(TreeNode<T> treeNode){
         if (treeNode == null){
             return true;

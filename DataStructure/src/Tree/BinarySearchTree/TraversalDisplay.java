@@ -1,5 +1,7 @@
 package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 
+import java.util.ArrayList;
+
 public class TraversalDisplay {
 
     public static void main(String[] args) {
@@ -9,18 +11,33 @@ public class TraversalDisplay {
 
 //        bst.displayTree();
 
-        System.out.println("Pre-Order Traversal Display: ");
-        preOrderDisplay(root, "",true);
-        System.out.println();
+//        System.out.println("Pre-Order Traversal Display: ");
+//        preOrderDisplay(root, "",true);
+//        System.out.println();
 
         System.out.println("In-Order Traversal Display: ");
-        inOrderDisplay(root,"",true);
+//        inOrderDisplay(root,"",true);
+        ArrayList<Integer> inOrderReturn = inOrderReturn(root,new ArrayList<>());
+        System.out.println(inOrderReturn);
         System.out.println();
 
-        System.out.println("Post-Order Traversal Display: ");
-        postOrderDisplay(root,"",true);
+//        System.out.println("Post-Order Traversal Display: ");
+//        postOrderDisplay(root,"",true);
 
 
+    }
+
+    private static ArrayList<Integer> inOrderReturn(BinarySearchTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
+        if (treeNode == null) {
+            return arr;
+        }
+
+
+        inOrderReturn(treeNode.left, arr);
+        arr.add(treeNode.value);
+        inOrderReturn(treeNode.right, arr);
+
+        return arr;
     }
 
 
