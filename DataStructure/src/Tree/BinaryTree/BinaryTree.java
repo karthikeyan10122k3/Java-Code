@@ -1,5 +1,7 @@
 package com.kar.practice.exercise.DataStructure.src.Tree.BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class BinaryTree<T> {
@@ -61,5 +63,37 @@ public class BinaryTree<T> {
         displayTree(binaryTreeNode.left, indent, false);
         displayTree(binaryTreeNode.right, indent, true);
     }
+
+    public void createBinaryTreeFromArray(T[] array) {
+        if (array == null || array.length == 0) {
+            return;
+        }
+
+        T value = (T) array[0];
+        root = new BinaryTreeNode<>(value);
+        Queue<BinaryTreeNode<T>> queue = new LinkedList<>();
+        queue.add(root);
+
+        int i = 1;
+        while (i < array.length) {
+            BinaryTreeNode<T> currentNode = queue.poll();
+            if (currentNode != null) {
+                // Add left child
+                if (i < array.length && array[i] != null) {
+                    currentNode.left = (BinaryTreeNode<T>) new BinaryTreeNode<>(array[i]);
+                    queue.add(currentNode.left);
+                }
+                i++;
+
+                // Add right child
+                if (i < array.length && array[i] != null) {
+                    currentNode.right = (BinaryTreeNode<T>) new BinaryTreeNode<>(array[i]);
+                    queue.add(currentNode.right);
+                }
+                i++;
+            }
+        }
+    }
+
 
 }

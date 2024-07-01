@@ -89,7 +89,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return true;
         }
 
-        return Math.max(getHeight(treeNode.left), getHeight(treeNode.right)) <=1 && balanced(treeNode.left) && balanced(treeNode.right) ;
+        int height = Math.max(getHeight(treeNode.left), getHeight(treeNode.right));
+
+        return  (height >= -1  && height <= 1 ) && balanced(treeNode.left) && balanced(treeNode.right) ;
     }
 
 //  Displaying Tree Part
