@@ -12,7 +12,7 @@ public class BalancedBinaryTree {
 
     }
 
-    private static boolean isBalanced(BinaryTree.BinaryTreeNode<Integer> treeNode){
+    private static boolean isBalanced(BinaryTree.TreeNode<Integer> treeNode){
         if (treeNode == null) {
             return true;
         }
@@ -27,7 +27,7 @@ public class BalancedBinaryTree {
         return Math.abs(leftHeight - rightHeight) <= 1 && isBalanced(treeNode.left) && isBalanced(treeNode.right);
     }
 
-    private static int getHeight(BinaryTree.BinaryTreeNode<Integer> treeNode) {
+    private static int getHeight(BinaryTree.TreeNode<Integer> treeNode) {
         if (treeNode == null) {
             return 0;
         }

@@ -1,20 +1,20 @@
 package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 
-public class BinarySearchTree<T extends Comparable<T>> {
+public class BinaryTree<T extends Comparable<T>> {
 
 //  BinaryTreeNode Class
     public static class TreeNode<T>{
-        final T value;
+        final T val;
         private int height;
         TreeNode<T> left;
         TreeNode<T> right;
 
-        public TreeNode(T value){
-            this.value = value;
+        public TreeNode(T val){
+            this.val = val;
         }
     }
 
-    public BinarySearchTree(){
+    public BinaryTree(){
 
     }
 
@@ -43,7 +43,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
     // Inserting as Array
     public TreeNode<T> insert(T[] inputArray){
         for (T value : inputArray) {
-            root = insert(root, value);
+            if (value != null) {
+                root = insert(root, value);
+            }
         }
         return root;
     }
@@ -67,11 +69,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
     // Inserting element in a Tree Main Recursive Function
     private TreeNode<T> insert(TreeNode<T> treeNode, T value) {
         if (treeNode == null) {
-            TreeNode<T> newTreeNode = new TreeNode<>(value);
-            return newTreeNode;
+            return new TreeNode<>(value);
         }
 
-        int compare = value.compareTo(treeNode.value);
+        int compare = value.compareTo(treeNode.val);
         if (compare < 0) {
             treeNode.left = insert(treeNode.left, value);
         } else if (compare > 0) {
@@ -114,7 +115,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             indent += "|    ";
         }
 
-        System.out.println(treeNode.value);
+        System.out.println(treeNode.val);
         displayTree(treeNode.left, indent, false);
         displayTree(treeNode.right, indent, true);
     }

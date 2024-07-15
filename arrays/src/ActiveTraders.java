@@ -1,4 +1,4 @@
-package com.kar.practice.exercise.DataStructure.src;
+package com.kar.practice.exercise.arrays.src;
 
 import java.util.*;
 
