@@ -13,11 +13,11 @@ public class SymmetricTree {
 
     }
 
-    private static boolean isSymmetric(BinaryTree.BinaryTreeNode<Integer> treeNode) {
+    private static boolean isSymmetric(BinaryTree.TreeNode<Integer> treeNode) {
         return isSymmetricHelper(treeNode.left,treeNode.right) ;
     }
 
-    private static boolean isSymmetricHelper(BinaryTree.BinaryTreeNode<Integer> leftSubTree, BinaryTree.BinaryTreeNode<Integer> rightSubTree) {
+    private static boolean isSymmetricHelper(BinaryTree.TreeNode<Integer> leftSubTree, BinaryTree.TreeNode<Integer> rightSubTree) {
         if (leftSubTree == null && rightSubTree == null) {
             return true;
         }
@@ -29,6 +29,6 @@ public class SymmetricTree {
             return false;
         }
 
-        return Objects.equals(leftSubTree.data, rightSubTree.data) && isSymmetricHelper(leftSubTree.left, rightSubTree.right) && isSymmetricHelper(leftSubTree.right, rightSubTree.left);
+        return Objects.equals(leftSubTree.val, rightSubTree.val) && isSymmetricHelper(leftSubTree.left, rightSubTree.right) && isSymmetricHelper(leftSubTree.right, rightSubTree.left);
     }
 }
