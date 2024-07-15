@@ -59,14 +59,11 @@ public class MedianOfTwoSortedArrays {
                 k++;
             }
         }
-        System.out.println(Arrays.toString(mergedArray));
         int low = 0;
         int high = mergedArray.length;
-        System.out.println("Merged Array Length: "+mergedArray.length);
 
 
         int midIndex = (low +  high) / 2;
-        System.out.println("Mid Index: "+midIndex);
 
         if (mergedArray.length % 2 == 0){
             return (double) (mergedArray[midIndex] + mergedArray[midIndex - 1]) /2;
