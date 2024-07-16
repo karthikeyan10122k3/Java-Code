@@ -1,6 +1,6 @@
 package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 
-public class BinaryTree<T extends Comparable<T>> {
+public class BinarySearchTree<T extends Comparable<T>> {
 
 //  BinaryTreeNode Class
     public static class TreeNode<T>{
@@ -14,14 +14,14 @@ public class BinaryTree<T extends Comparable<T>> {
         }
     }
 
-    public BinaryTree(){
+    public BinarySearchTree(){
 
     }
 
 //  Getting Height Of the BinaryTreeNode
     public int getHeight(TreeNode<T> treeNode){
         if (treeNode == null){
-            return  -1;
+            return  - 1;
         }
         return treeNode.height;
     }

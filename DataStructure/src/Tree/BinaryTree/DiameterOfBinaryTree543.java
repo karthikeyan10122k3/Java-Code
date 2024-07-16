@@ -5,7 +5,7 @@ public class DiameterOfBinaryTree543 {
 
     public static void main(String[] args) {
         BinaryTree<Integer> tree = new BinaryTree<>();
-        Integer[] array = {1,null,2};
+        Integer[] array = {1,2,3,4,5};
 
         tree.createBinaryTreeFromArray(array);
         tree.displayTree();
@@ -18,7 +18,7 @@ public class DiameterOfBinaryTree543 {
         if (root == null || (root.left == null && root.right == null)){
             return 0;
         }
-
+        
         getHeight(root);
         return maxDiameter - 1 ;
     }

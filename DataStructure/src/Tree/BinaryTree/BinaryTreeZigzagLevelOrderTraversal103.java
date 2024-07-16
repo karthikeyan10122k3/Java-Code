@@ -30,7 +30,6 @@ public class BinaryTreeZigzagLevelOrderTraversal103 {
             int levelQueueSize = levelQueue.size();
             List<Integer> levelNode = new ArrayList<>(levelQueueSize);
 
-            System.out.println(doZigZag);
             for (int i = 0; i < levelQueueSize; i++) {
                 BinaryTree.TreeNode<Integer> currNode = doZigZag ? levelQueue.removeLast() : levelQueue.poll();
                 levelNode.add(currNode.val);

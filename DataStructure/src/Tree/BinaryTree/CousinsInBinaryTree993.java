@@ -36,7 +36,7 @@ public class CousinsInBinaryTree993 {
 
     }
 
-//    public static BinaryTree.TreeNode<Integer> findNodeUsingValue(BinaryTree.TreeNode<Integer> root, int value){
+//    public static BinarySearchTree.TreeNode<Integer> findNodeUsingValue(BinarySearchTree.TreeNode<Integer> root, int value){
 //        if (root == null){
 //            return null;
 //        }
@@ -44,11 +44,11 @@ public class CousinsInBinaryTree993 {
 //        if (root.val == value){
 //            return root;
 //        }
-//        BinaryTree.TreeNode<Integer> nodeFromLeft = findNodeUsingValue(root.left, value);
+//        BinarySearchTree.TreeNode<Integer> nodeFromLeft = findNodeUsingValue(root.left, value);
 //        if (nodeFromLeft != null){
 //            return nodeFromLeft;
 //        }
-//        BinaryTree.TreeNode<Integer> nodeFromRight = findNodeUsingValue(root.right, value);
+//        BinarySearchTree.TreeNode<Integer> nodeFromRight = findNodeUsingValue(root.right, value);
 //        return nodeFromRight;
 //    }
 
