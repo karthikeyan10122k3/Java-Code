@@ -2,17 +2,17 @@ package com.kar.practice.exercise.DataStructure.src.Tree.BinarySearchTree;
 
 public class ValidateBinarySearchTree98 {
     public static void main(String[] args) {
-        BinaryTree<Integer> bst = new BinaryTree<>();
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
-        BinaryTree.TreeNode<Integer> root = bst.insert(new Integer[]{2,1,3});
+        BinarySearchTree.TreeNode<Integer> root = bst.insert(new Integer[]{2,1,3});
         System.out.println(isValidBST(root));
     }
-    public static boolean isValidBST(BinaryTree.TreeNode<Integer> root) {
+    public static boolean isValidBST(BinarySearchTree.TreeNode<Integer> root) {
 
     return helperFunction(root, null,null);
 }
 
-    private static boolean helperFunction(BinaryTree.TreeNode<Integer> node, Integer leftVal, Integer rightVal) {
+    private static boolean helperFunction(BinarySearchTree.TreeNode<Integer> node, Integer leftVal, Integer rightVal) {
         if (node == null) {
             return true;
         }

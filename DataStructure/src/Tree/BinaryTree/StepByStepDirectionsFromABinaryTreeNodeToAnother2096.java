@@ -26,8 +26,7 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother2096 {
             sourcePath.append("U".repeat(sPath.length()));
             System.out.println(sourcePath + destinationPath);
         }else {
-
-        System.out.println(destinationPath);
+            System.out.println(destinationPath);
         }
 
     }

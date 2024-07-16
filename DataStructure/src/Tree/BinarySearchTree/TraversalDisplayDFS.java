@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class TraversalDisplayDFS {
 
     public static void main(String[] args) {
-        BinaryTree<Integer> bst = new BinaryTree<>();
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
-        BinaryTree.TreeNode<Integer> root = bst.insert(new Integer[]{3,8,9,20,15,7});
+        BinarySearchTree.TreeNode<Integer> root = bst.insert(new Integer[]{3,8,9,20,15,7});
 
 //        bst.displayTree();
 
@@ -32,7 +32,7 @@ public class TraversalDisplayDFS {
     }
 
 //  Pre-Order
-    private static void preOrderDisplay(BinaryTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+    private static void preOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
         if (treeNode == null) {
             return;
         }
@@ -51,7 +51,7 @@ public class TraversalDisplayDFS {
         preOrderDisplay(treeNode.left, indent, false);
         preOrderDisplay(treeNode.right, indent, true);
     }
-    public static ArrayList<Integer> preOrderReturn(BinaryTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
+    public static ArrayList<Integer> preOrderReturn(BinarySearchTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
         if (treeNode == null) {
             return arr;
         }
@@ -63,7 +63,7 @@ public class TraversalDisplayDFS {
     }
 
 //  In-Order
-    private static void inOrderDisplay(BinaryTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+    private static void inOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
         if (treeNode == null) {
             return;
         }
@@ -82,7 +82,7 @@ public class TraversalDisplayDFS {
 
         inOrderDisplay(treeNode.right, indent + (isRight ? "     " : "|    "), true);
     }
-    private static ArrayList<Integer> inOrderReturn(BinaryTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
+    private static ArrayList<Integer> inOrderReturn(BinarySearchTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
         if (treeNode == null) {
             return arr;
         }
@@ -95,7 +95,7 @@ public class TraversalDisplayDFS {
     }
 
 //  Post-Order
-    private static void postOrderDisplay(BinaryTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
+    private static void postOrderDisplay(BinarySearchTree.TreeNode<Integer> treeNode, String indent, boolean isRight) {
         if (treeNode == null) {
             return;
         }
@@ -114,7 +114,7 @@ public class TraversalDisplayDFS {
         System.out.println(treeNode.val);
     }
 
-    public static ArrayList<Integer> postOrderReturn(BinaryTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
+    public static ArrayList<Integer> postOrderReturn(BinarySearchTree.TreeNode<Integer> treeNode, ArrayList<Integer> arr){
         if (treeNode == null) {
             return arr;
         }
