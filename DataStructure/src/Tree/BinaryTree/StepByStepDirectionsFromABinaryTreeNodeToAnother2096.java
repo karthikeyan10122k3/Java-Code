@@ -13,56 +13,54 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother2096 {
         tree.createBinaryTreeFromArray(array);
         tree.displayTree();
 
-        BinaryTree.TreeNode<Integer> s = findNodeUsingValue(tree.root,3);
-        BinaryTree.TreeNode<Integer> d = findNodeUsingValue(tree.root,6);
-
-        BinaryTree.TreeNode<Integer> lowestCommonAncestor = lowestCommonAncestor(tree.root, s,d);
-
-        String sPath = search(lowestCommonAncestor,s,"");
-        String destinationPath = search(lowestCommonAncestor,d,"");
-
-        StringBuilder sourcePath = new StringBuilder();
-        if (sPath != null){
-            sourcePath.append("U".repeat(sPath.length()));
-            System.out.println(sourcePath + destinationPath);
-        }else {
-            System.out.println(destinationPath);
-        }
+        System.out.println(getDirections(tree.root,3,6));
 
     }
 
-    private static String search(BinaryTree.TreeNode<Integer> root, BinaryTree.TreeNode<Integer> node, String path) {
+    public static String getDirections(BinaryTree.TreeNode<Integer> root, int startValue, int destValue) {
+
+        BinaryTree.TreeNode<Integer> lowestCommonAncestor = lowestCommonAncestor(root, startValue, destValue);
+
+        String sPath = search(lowestCommonAncestor,startValue,new StringBuilder());
+        String destinationPath = search(lowestCommonAncestor, destValue, new StringBuilder());
+
+        if (sPath != null){
+            return "U".repeat(sPath.length()) + destinationPath;
+        }
+
+        return destinationPath;
+
+    }
+    private static String search(BinaryTree.TreeNode<Integer> root, int val, StringBuilder path) {
         if (root == null){
             return null;
         }
 
-        if (root == node){
-            return path;
+        if (root.val == val){
+            return path.toString();
         }
 
-        String leftPath = search(root.left, node, path + "L");
+        path.append("L");
+        String leftPath = search(root.left, val, path);
         if (leftPath != null) {
             return leftPath;
         }
+        path.deleteCharAt(path.length() - 1);
 
-        String rightPath = search(root.right, node, path + "R");
+        path.append("R");
+        String rightPath = search(root.right, val, path);
         if (rightPath != null) {
             return rightPath;
         }
-
+        path.deleteCharAt(path.length() - 1);
         return null;
-
     }
-
-//    private static String searchDestination(BinaryTree.TreeNode<Integer> lowestCommonAncestor, BinaryTree.TreeNode<Integer> d, String s) {
-//    }
-
-    public static BinaryTree.TreeNode<Integer> lowestCommonAncestor(BinaryTree.TreeNode<Integer> root, BinaryTree.TreeNode<Integer> p, BinaryTree.TreeNode<Integer> q) {
+    public static BinaryTree.TreeNode<Integer> lowestCommonAncestor(BinaryTree.TreeNode<Integer> root, int p, int q) {
 
         if (root == null){
             return null;
         }
-        if (root == p || root== q){
+        if (root.val == p || root.val == q){
             return root;
         }
 
@@ -74,7 +72,6 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother2096 {
         }
 
         return leftTree == null ? rightTree : leftTree;
-
     }
 
 
