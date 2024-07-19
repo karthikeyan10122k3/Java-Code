@@ -7,13 +7,8 @@ import java.util.Scanner;
 public class SubSequences {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter no of element: ");
-        int length = sc.nextInt();
-        int[] inputArray = new int[length];
-        System.out.println("Enter the Elements of Array: ");
-        for (int i = 0; i < length; i++) {
-            inputArray[i] = sc.nextInt();
-        }
+        int[] inputArray = {1,2,3};
+
 
         ArrayList<ArrayList<Integer>> result = printSubset(inputArray);
 

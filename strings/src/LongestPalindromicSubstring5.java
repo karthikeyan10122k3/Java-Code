@@ -16,6 +16,7 @@ public class LongestPalindromicSubstring5 {
             int oddLength = isPalindrome(s,i,i);
             int evenLength = isPalindrome(s,i ,i+1);
             int maxLength = Math.max(oddLength,evenLength);
+
             if (maxLength > endIndex - startIndex){
                 startIndex = i - ((maxLength - 1) /2);
                 endIndex = i + (maxLength / 2);

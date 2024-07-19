@@ -11,7 +11,6 @@ public class SubSequences {
 
         printSubSequences(subSequences,inputString);
     }
-
     private static void printSubSequences(String subSequences, String inputString) {
 
         if(inputString.isEmpty()){
