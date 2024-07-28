@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Permutation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter no of element: ");
-        String inputString = sc.nextLine();
+//        System.out.print("Enter the String: ");
+        String inputString = "abc";
 
         ArrayList<String> p = new ArrayList<>();
         ArrayList<String> permutation = permutationReturn("",inputString,p);
