@@ -4,7 +4,6 @@ public class FindTheTownJudge997 {
     public static void main(String[] args) {
         int[][] trust = {{1,3},{2,3}};
         int n = 3;
-
         System.out.println(findJudge(n,trust));
 
     }

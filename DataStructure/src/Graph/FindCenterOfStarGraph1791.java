@@ -4,9 +4,7 @@ public class FindCenterOfStarGraph1791 {
 
     public static void main(String[] args) {
         int[][] edges = {{1, 2},{2, 3},{4, 2}};
-
         System.out.println(findCenter(edges));
-
     }
 
     public static int findCenter(int[][] edges) {
